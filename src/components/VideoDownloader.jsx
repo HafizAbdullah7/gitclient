@@ -5,7 +5,7 @@ const VideoDownloader = () => {
   const [url, setUrl] = useState('');
 
   const handleDownload = () => {
-    axios.get(`https://server2bard.vercel.app/download?url=${url}`, { responseType: 'blob' })
+    axios.get(`https://serverbard2.vercel.app/download?url=${url}`, { responseType: 'blob' })
       .then((response) => {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
